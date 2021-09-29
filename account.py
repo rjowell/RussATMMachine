@@ -59,21 +59,25 @@ class ATM:
       return self.homeScreen()
 
   def processWithdraw(self):
-    withdrawAmt = int(input("How much do you want to withdraw?: "))
-    if withdrawAmt < 0:
+    withdrawAmt = input("How much do you want to withdraw? E to Exit: ")
+    if withdrawAmt == "E":
+      return self.homeScreen()
+    else:
+      withdrawAmt = int(withdrawAmt)
+      if withdrawAmt < 0:
         print("That's called a deposit silly!")
         return self.processWithdraw()
-    elif withdrawAmt == 0:
-      print("Well what's the point??")
-      return self.processWithdraw()
-    else:
-      if self.currentAccount.withdraw(withdrawAmt) == False:
-        print("Do you think money grows on trees? You don't have enough!")
+      elif withdrawAmt == 0:
+        print("Well what's the point??")
         return self.processWithdraw()
       else:
-        self.currentAccount.withdraw(withdrawAmt)
-        print("New Balance: "+str(self.currentAccount.getCurrentBalance()))
-        return self.homeScreen()
+        if self.currentAccount.withdraw(withdrawAmt) == False:
+          print("Do you think money grows on trees? You don't have enough!")
+          return self.processWithdraw()
+        else:
+          self.currentAccount.withdraw(withdrawAmt)
+          print("New Balance: "+str(self.currentAccount.getCurrentBalance()))
+          return self.homeScreen()
 
      
 
@@ -102,6 +106,17 @@ class ATM:
   def addAccount(self,name,city,isChecking):
     self.accountList.append(Account(name,city,isChecking))
     return True
+
+
+
+
+'''
+Write a class for an account. It should take the following parameters:
+  -name
+  -city
+  -type of account
+
+'''
 
 
 class Account:

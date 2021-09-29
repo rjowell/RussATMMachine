@@ -1,0 +1,24 @@
+WHAT IS AN ATM?
+Automated Teller Machine
+
+WHAT CAN YOU AT AN ATM
+-Withdraw Money
+-Deposit Money
+-Transfer Money
+-Open an Account
+-Insert Your Card
+
+
+WHAT CODE DO WE NEED?
+-Functions:
+  Deposit(specify how much money)
+  Withdraw(specify how much money)
+    -Can't withdraw more than you have
+  Active Accounts - CC Number
+  if/else - home screen options
+
+-Variables:
+  -how much money is in what account.
+  -any other information about the account
+  -ledger/history of transactions
+  -receipts
