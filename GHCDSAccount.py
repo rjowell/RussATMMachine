@@ -7,6 +7,9 @@ class Account:
     self.password = passwordIn
     self.balance = 0
 
-  def withdraw():
+  def withdraw(self,amount):
+    if amount < self.balance:
+      self.balance -= amount
 
-  def deposit():
+  def deposit(self,amount):
+    self.balance += amount

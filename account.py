@@ -103,9 +103,21 @@ class ATM:
     self.accountList = []
     self.currentAccount = None
 
+  ''' 
+  Define an ATM Class:
+  Init method should take a single parameter: Bank name,
+  set this as a property, then initialize 2 other properies:
+  accountList - blank array
+  current account - None
+
+  '''
+
   def addAccount(self,name,city,isChecking):
     self.accountList.append(Account(name,city,isChecking))
     return True
+  '''
+  Create an Add Account method - 3 params (name city, is checking)
+  '''
 
 
 
