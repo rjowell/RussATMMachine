@@ -1,3 +1,15 @@
+'''
+Create an "Account" class
+It should take 4 parameters in the init method: name, city, accountType, password input
+-These should be set to the respective properties of that class.
+-Also in the init method, set a "balance" property to 0 
+
+
+'''
+
+
+
+
 class Account:
 
   def __init__(self,nameInput,cityInput,accountTypeIn,passwordIn):

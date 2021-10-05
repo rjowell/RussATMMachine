@@ -108,7 +108,7 @@ class ATM:
   Init method should take a single parameter: Bank name,
   set this as a property, then initialize 2 other properies:
   accountList - blank array
-  current account - None
+  current account - 'None'
 
   '''
 
@@ -116,7 +116,9 @@ class ATM:
     self.accountList.append(Account(name,city,isChecking))
     return True
   '''
-  Create an Add Account method - 3 params (name city, is checking)
+  Create an Add Account method - params should inlcude the params you used for your account
+    - use those parameters to append a new account to your accountlist
+
   '''
 
 
