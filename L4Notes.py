@@ -1,11 +1,27 @@
 
+class ATM:
+
+  def __init__(self,bankName,bankCity,listOfAccounts):
+    self.name = bankName
+    self.city = bankCity
+    self.accountList = listOfAccounts
+
+'''
+
+Add an ATM class: Init should take: bankName, bankCity, list of accounts
+
+
+Using your Bank Account class, create instances of 3 different bank accounts for each of your fellow classmates.
+
+
+'''
+
 
 class BankAccount:
 
   #def deposit():
 
   #def withdraw():
-
   
   #def checkBalance():
 
@@ -15,6 +31,12 @@ class BankAccount:
     self.lastName = lastNameInput
     self.eMail = eMailInput
     self.phone = phoneNumberInput
+    self.balance = 0
+
+
+MrRussAccount = BankAccount("investment","Bigmac","Whopper","king@burgerking.com","7034440000")
+
+
 
   
 

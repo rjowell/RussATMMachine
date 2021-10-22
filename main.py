@@ -1,3 +1,65 @@
+from account import Account, ATM
+
+newAcct = ATM()
+newAcct.homeScreen()
+
+'''
+myName = "Russ"
+
+
+
+accounts = []
+
+accounts.append(Account("Mr. Russ","Washington",False))
+accounts.append(Account("Kai","Manitoba",True))
+accounts.append(Account("Jayden","Sicily",True))
+accounts.append(Account("Cole","San Francisco",False))
+accounts.append(Account("Ashleigh","Buffalo",False))
+accounts.append(Account("Nathan","Barcelona",False))
+
+name_to_search = input("Whose name do you want to search?")
+
+currentAccount = None
+
+
+#FOR WHILE
+students = ["Ashleigh","Amaru","Jayden","Maya"]
+loopCount = 0
+
+for item in accounts:
+  loopCount += 1
+  if item.name == name_to_search:
+    currentAccount = item
+    break
+     
+print(loopCount)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 from GHCDSAccount import Account
 #import GHCDSAccount
 
@@ -20,6 +82,7 @@ account_list.append(MrRussAccount)
 account_list.append(AmaruAccount)
 
 print(account_list[2].name)
+'''
 
 
 

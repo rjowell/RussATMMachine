@@ -1,7 +1,20 @@
-class ATM:
 
-  
-  
+
+'''
+Write a homeScreen Method
+Prints out prompts for the user: Open Account, Load Account, Deposit, withdraw, exit, help
+Write out if/else structure for responses
+
+
+RANDOM NUMBER GUESSER GAME
+-Generate a random number between 1 and 20 and store it in a variable
+Ask the user to guess the number
+Say whether the number is too high or too low after each guess
+Maximum of 5 guesses
+
+
+'''
+class ATM:
   
   def homeScreen(self):
     print("**************************")
@@ -79,7 +92,14 @@ class ATM:
           print("New Balance: "+str(self.currentAccount.getCurrentBalance()))
           return self.homeScreen()
 
-     
+
+
+  '''
+  Get input of name to search
+  If you find an account with that name, load it in to current account
+  IF no account with that name exists, print out an error
+  '''
+
 
   def loadAccount(self):
     nameInput = input("Enter the name of the account you want to load: ")
@@ -111,15 +131,46 @@ class ATM:
   current account - 'None'
 
   '''
-
+  '''
   def addAccount(self,name,city,isChecking):
     self.accountList.append(Account(name,city,isChecking))
     return True
+    '''
+
+
+
+
+
+
+
+
+
+
+
   '''
   Create an Add Account method - params should inlcude the params you used for your account
     - use those parameters to append a new account to your accountlist
 
   '''
+
+  def addAccount(self,nameIn,cityIn,typeOfAccount):
+    self.accountList.append(Account(nameIn,cityIn,typeOfAccount))
+
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -154,3 +205,6 @@ class Account:
 
   def getCurrentBalance(self):
     return self.currentBalance
+
+
+

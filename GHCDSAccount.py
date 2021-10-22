@@ -22,6 +22,12 @@ class Account:
   def withdraw(self,amount):
     if amount < self.balance:
       self.balance -= amount
+      return True
+    else:
+      return False
 
   def deposit(self,amount):
     self.balance += amount
+
+  def checkBalance(self):
+    return self.balance
