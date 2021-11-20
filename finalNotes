@@ -1,0 +1,16 @@
+'''
+
+main.py
+
+ATM.py:
+ATM Class with the following methods:
+__init__
+Add Account
+Load Account
+Process Deposit
+Process Withdraw
+
+account.py
+Account Class
+
+'''

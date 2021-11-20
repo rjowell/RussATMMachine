@@ -1,19 +1,4 @@
 
-
-'''
-Write a homeScreen Method
-Prints out prompts for the user: Open Account, Load Account, Deposit, withdraw, exit, help
-Write out if/else structure for responses
-
-
-RANDOM NUMBER GUESSER GAME
--Generate a random number between 1 and 20 and store it in a variable
-Ask the user to guess the number
-Say whether the number is too high or too low after each guess
-Maximum of 5 guesses
-
-
-'''
 class ATM:
   
   def homeScreen(self):
@@ -70,6 +55,9 @@ class ATM:
       self.currentAccount.deposit(depositAmt)
       print("New Balance: "+str(self.currentAccount.getCurrentBalance()))
       return self.homeScreen()
+  
+  def addAccount(self,nameIn,cityIn,typeOfAccount):
+    self.accountList.append(Account(nameIn,cityIn,typeOfAccount))
 
   def processWithdraw(self):
     withdrawAmt = input("How much do you want to withdraw? E to Exit: ")
@@ -123,19 +111,7 @@ class ATM:
     self.accountList = []
     self.currentAccount = None
 
-  ''' 
-  Define an ATM Class:
-  Init method should take a single parameter: Bank name,
-  set this as a property, then initialize 2 other properies:
-  accountList - blank array
-  current account - 'None'
-
-  '''
-  '''
-  def addAccount(self,name,city,isChecking):
-    self.accountList.append(Account(name,city,isChecking))
-    return True
-    '''
+  
 
 
 
@@ -147,14 +123,8 @@ class ATM:
 
 
 
-  '''
-  Create an Add Account method - params should inlcude the params you used for your account
-    - use those parameters to append a new account to your accountlist
 
-  '''
 
-  def addAccount(self,nameIn,cityIn,typeOfAccount):
-    self.accountList.append(Account(nameIn,cityIn,typeOfAccount))
 
     
 
@@ -162,6 +132,24 @@ class ATM:
 
 
 
+class Account:
+
+  def __init__(self,name,city,isChecking):
+    self.currentBalance = 0
+    self.isChecking = isChecking
+    self.name = name
+    self.city = city
+
+  def deposit(self,depositAmount):
+    self.currentBalance += depositAmount
+    return True
+
+  def withdraw(self,withdrawAmount):
+    if withdrawAmount > self.currentBalance:
+      return False
+    else:
+      self.currentBalance -= withdrawAmount
+      return True
 
 
 
@@ -175,13 +163,13 @@ class ATM:
 
 
 
-'''
-Write a class for an account. It should take the following parameters:
-  -name
-  -city
-  -type of account
 
-'''
+
+
+
+
+
+
 
 
 class Account:
@@ -205,6 +193,17 @@ class Account:
 
   def getCurrentBalance(self):
     return self.currentBalance
+
+
+'''
+Class Account:
+
+Initialize: Name, City, isChecking
+self.currentBalance = 0
+
+define depoist and withdraw methods.
+'''
+
 
 
 
